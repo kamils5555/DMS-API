@@ -12,7 +12,7 @@ def generate_desk_id():
 def generate_desk_name():
     return f"DESK {random.randint(1000, 9999)}"
 
-def run(server_class=HTTPServer, handler_class=SimpleRESTServer, port=8084, use_https=False, cert_file=None, key_file=None, desks=2):
+def run(server_class=HTTPServer, handler_class=SimpleRESTServer, port=10000, use_https=False, cert_file=None, key_file=None, desks=2):
     desk_manager = DeskManager()
     desk_manager.add_desk("cd:fb:1a:53:fb:e6", "DESK 4486", "Linak A/S", UserType.ACTIVE)
     desk_manager.add_desk("ee:62:5b:b8:73:1d", "DESK 6743", "Linak A/S", UserType.STANDING)
