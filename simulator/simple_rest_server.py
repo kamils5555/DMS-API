@@ -46,7 +46,11 @@ class SimpleRESTServer(BaseHTTPRequestHandler):
             return False
         
         return True
-    
+
+    def do_HEAD(self):
+         self.send_response(200)
+         self.end_headers()
+
     def do_GET(self):
         if not self._is_valid_path():
             return
